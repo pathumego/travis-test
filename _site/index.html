@@ -1,0 +1,299 @@
+ <html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:700|Karla:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/syntax.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/simplegrid.css">
+    <script src="js/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/gen_list.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        // Wait for the page to load first
+        window.onload = function () {
+
+            //Get a reference to the link on the page
+            // with an id of "exportxt"
+            var a = document.getElementById("exportxt");
+
+            //Set code to run when the link is clicked
+            // by assigning a function to "onclick"
+            a.onclick = function () {
+
+
+                window.open('cleanstart-install.sh');
+
+
+
+
+                function downloadInnerHtml(filename, elId, mimeType) {
+                    var elHtml = document.getElementById(elId).innerHTML;
+                    var link = document.createElement('a');
+                    mimeType = mimeType || 'text/plain';
+                    link.setAttribute('download', filename);
+                    link.setAttribute('href', 'data:' + mimeType + ';charset=utf-8,' + encodeURIComponent(elHtml));
+                    link.click();
+                }
+                var fileName = 'grphictools.list'; // You can use the .txt extension if you want
+                downloadInnerHtml(fileName, 'editor', 'text/plain');
+                //If you don't want the link to actually 
+                // redirect the browser to another page, then
+                // return false at the end of this block.
+                // Note that this also prevents event bubbling,
+                // which is probably what we want here, but won't 
+                // always be the case.
+                return false;
+            }
+        }
+        
+        
+    </script>
+    <script>$('#toggle4').click(function() {
+	$('.toggle4').slideToggle('fast');
+	return false;
+});
+</script>
+    <script>
+        localStorage.clear();
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            // Grab the text from the JS constant file, and show it
+            prepareAndShowFontLayout();
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="grid grid-pad">
+
+
+    <div class="col-1-3 mobile-col-1-1">
+        <h1>Libre Graphics Tools Installer Scripts for Ubuntu</h1>
+        <a href="#" id="slideToggle2"><h2>HELP</h2></a>
+        <a href="https://github.com/mooniak/ubuntu-graphics-suite#how-to-add-new-ppas"><h2>ADD PPA'S&#8594;</h2></a>
+    </div> 
+            
+<br />
+
+<div style="display:none;" class="slideTogglebox2">
+<div class="col-1-2 mobile-col-1-1">
+	<h2>How To Use</h2>
+        <li>Mark the big gray button of Softwares you need to add install. </li>
+        <li>Hit the Download button.</li>
+        <li>Keep both files in the same folder.</li>
+        <li>Open Terminal</li>
+        <li>Go to the folder where you saved the downloaded files</li>
+        <span class="code_display"> cd Downloads</span>
+        <li>Run the shell script as root user.</li>
+        <span class="code_display"> sudo sh cleanstart.graphics.sh</span>
+
+</div>
+              
+	<div class="col-1-2 mobile-col-1-1">
+	<h2>Warnings :)</h2>
+        <li>Check the 'Updated on' date on each software listed. That is the date that we last checked the PPA to see if its still being updated.</li>
+        <li>This is a collection of ppa's that we have collected since we started using Ubuntu our studio. </li>
+        <li>There might be compatibility issues on some of the latest versions like Scribus. So Google around and/or visit the PPA page on Launchpad and find out wheather it works for you.</li>
+        <li>There are many different Libre softwares that do the same tasks.. And there are many PPA's with different packages. This is based on just our preference.</li>
+	</div>
+	</div>
+  
+  
+            
+            
+    </div>
+
+<div class="grid grid-pad">
+
+        
+    <div class="post">
+        <div class="col-1-3">
+
+            <div class="tile blue design">
+
+                <input type="checkbox" id="inkscape" class="regular-radio" onchange="refreshFeatures()" />
+                <label for="inkscape"></label>
+                <h2>Inkscape</h2>
+                <div class="category">font editor&nbsp; </div>
+                <div class="category">official | Updated April 29, 2015</div>
+
+
+
+                 
+
+
+            </div>
+
+        </div>
+
+        </div>  
+    <div class="post">
+        <div class="col-1-3">
+
+            <div class="tile blue design">
+
+                <input type="checkbox" id="fontforge" class="regular-radio" onchange="refreshFeatures()" />
+                <label for="fontforge"></label>
+                <h2>FontForge</h2>
+                <div class="category">font editor&nbsp; </div>
+                <div class="category">official | Updated April 29, 2015</div>
+
+
+
+                 
+
+
+            </div>
+
+        </div>
+
+        </div>      
+    <div class="post">
+        <div class="col-1-3">
+
+            <div class="tile blue design">
+
+                <input type="checkbox" id="krita" class="regular-radio" onchange="refreshFeatures()" />
+                <label for="krita"></label>
+                <h2>Krita</h2>
+                <div class="category">raster editor&nbsp; </div>
+                <div class="category">Official Stable | Updated April 29, 2015</div>
+
+
+
+                 
+
+
+            </div>
+
+        </div>
+
+        </div>  
+    <div class="post">
+        <div class="col-1-3">
+
+            <div class="tile blue design">
+
+                <input type="checkbox" id="gimp-edge" class="regular-radio" onchange="refreshFeatures()" />
+                <label for="gimp-edge"></label>
+                <h2>GIMP Edge</h2>
+                <div class="category">raster editor&nbsp; </div>
+                <div class="category">official | Updated April 29, 2015</div>
+
+
+
+                 
+
+
+            </div>
+
+        </div>
+
+        </div>  
+    <div class="post">
+        <div class="col-1-3">
+
+            <div class="tile blue design">
+
+                <input type="checkbox" id="gimp" class="regular-radio" onchange="refreshFeatures()" />
+                <label for="gimp"></label>
+                <h2>GIMP</h2>
+                <div class="category">raster editor&nbsp; </div>
+                <div class="category">official | Updated April 29, 2015</div>
+
+
+
+                 
+
+
+            </div>
+
+        </div>
+
+        </div>      
+    <div class="post">
+        <div class="col-1-3">
+
+            <div class="tile blue design">
+
+                <input type="checkbox" id="fontmatrix" class="regular-radio" onchange="refreshFeatures()" />
+                <label for="fontmatrix"></label>
+                <h2>fontmatrix</h2>
+                <div class="category">font browser&nbsp; </div>
+                <div class="category">Ubuntu Repositories | Updated May 05, 2015</div>
+
+
+
+                 
+
+
+            </div>
+
+        </div>
+
+        </div>  
+
+</div>
+<div class="grid grid-pad">
+    <div class="col-1-3 mobile-col-1-1 push-1-3">
+        <a id="exportxt" href="#">DOWNLOAD INSTALLER SCRIPTS&nbsp;&#8623;</a>
+        <div style="display:none;" id="editor" class="code_display"></div>
+
+ <br /><br />
+	
+      
+ 
+	
+ 
+        
+    </div>
+    
+  
+ 
+
+
+ 
+<script type="text/javascript">
+ 
+
+$("#slideToggle").click(function () {
+   $('.slideTogglebox').slideToggle();
+});
+    $("#slideToggle2").click(function () {
+   $('.slideTogglebox2').slideToggle();
+});
+ 
+
+</script>
+ 
+    
+</div>
+
+
+ 
+ <!-- 11/12 and 1/12 layout -->
+		<div class="grid grid-pad">
+			<div class="col-11-12">
+				<div class="content" id='footer'>
+	<span style="font-weight:900;">MADE IN SRI LANKA</span> by
+© <a href="http://mooniak.com">mooniak</a> 
+				</div>
+			</div>
+			<div class="col-1-12">
+				<div class="content">
+				</div>
+			</div>
+		</div>
+
+</div>
+
+</body>
+</html>

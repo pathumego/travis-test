@@ -1,0 +1,132 @@
+ <html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:700|Karla:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/syntax.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/simplegrid.css">
+    <script src="js/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/gen_list.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        // Wait for the page to load first
+        window.onload = function () {
+
+            //Get a reference to the link on the page
+            // with an id of "exportxt"
+            var a = document.getElementById("exportxt");
+
+            //Set code to run when the link is clicked
+            // by assigning a function to "onclick"
+            a.onclick = function () {
+
+
+                window.open('cleanstart-install.sh');
+
+
+
+
+                function downloadInnerHtml(filename, elId, mimeType) {
+                    var elHtml = document.getElementById(elId).innerHTML;
+                    var link = document.createElement('a');
+                    mimeType = mimeType || 'text/plain';
+                    link.setAttribute('download', filename);
+                    link.setAttribute('href', 'data:' + mimeType + ';charset=utf-8,' + encodeURIComponent(elHtml));
+                    link.click();
+                }
+                var fileName = 'grphictools.list'; // You can use the .txt extension if you want
+                downloadInnerHtml(fileName, 'editor', 'text/plain');
+                //If you don't want the link to actually 
+                // redirect the browser to another page, then
+                // return false at the end of this block.
+                // Note that this also prevents event bubbling,
+                // which is probably what we want here, but won't 
+                // always be the case.
+                return false;
+            }
+        }
+        
+        
+    </script>
+    <script>$('#toggle4').click(function() {
+	$('.toggle4').slideToggle('fast');
+	return false;
+});
+</script>
+    <script>
+        localStorage.clear();
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            // Grab the text from the JS constant file, and show it
+            prepareAndShowFontLayout();
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+<div class="container">
+<div class="post">
+  <h1 class="post-title">fontmatrix</h1>
+  <span class="post-date">05 May 2015</span>
+  
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="http://mooniak.com/ubuntu-graphics-suite//2015/04/29/krita.html">
+            Krita
+            <small>29 Apr 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="http://mooniak.com/ubuntu-graphics-suite//2015/04/29/inkscape.html">
+            Inkscape
+            <small>29 Apr 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="http://mooniak.com/ubuntu-graphics-suite//2015/04/29/gimp-edge.html">
+            GIMP Edge
+            <small>29 Apr 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+ 
+ <!-- 11/12 and 1/12 layout -->
+		<div class="grid grid-pad">
+			<div class="col-11-12">
+				<div class="content" id='footer'>
+	<span style="font-weight:900;">MADE IN SRI LANKA</span> by
+© <a href="http://mooniak.com">mooniak</a> 
+				</div>
+			</div>
+			<div class="col-1-12">
+				<div class="content">
+				</div>
+			</div>
+		</div>
+
+</div>
+
+</body>
+</html>
