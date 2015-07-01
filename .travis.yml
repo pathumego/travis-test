@@ -1,5 +1,5 @@
-script: bash ./deploy-gh-pages.sh
+script: bash ./deploy.sh
 env:
   global:
-  - GH_REF: github.com/w3ctag/promises-guide.git
-  - secure: 
+  - GH_REF: github.com/pathumego/travis-test.git
+  - secure: dI8N079AcUQCntBWSWY6kru8qzy+0192s3VtIi4b8x/Iw4z1QGGiSNgQourPQCRk16A0pTJKzvsaT0hxxGaia4YWYVTA1sMGxokNPqBVDajeS+nFFT4bcVG7jx0voR8QDm2/IVGwPtzwvpdM8LwZ9ZEFgKRF5gcI82T8m+yzAJzc7llWt7SiC46Dtdl75JO9JL0zB4HWcjLhKo+aEWVVZzAzfCFxp2cHpzHayvMuWX+cIKIeeeKllaXkxeGFA02piRXUWHPAByfGYhROAz7ruvGeRh9SjnHwR8/OElMLPgj87nGBnNVFkyQyT42lHMHUrjD20W9UqTlCVvkq+bzNdU1eWekaLXAmMEXL8VSl+YzatOAxyY4EFFlgq6LXoxSWTDSNMdLWPy1PkycsJ+++qjS8/ZAudv4q/RCzFoO7dZHMeiK3pTFdMuSxrygZ+ZiISjEbUd6mjxX4f1CdTETFifPGsq+31w/miixb9ki4IM7yRF0NBCJoAnWXQ498ETPXDWqkp8BDooUVoJoqWJcc4Trx/hF8I7KhTz5EaP2WgtGsn6iDR/23CDs4Z15lsylh3Ok+7nQYJJzWJFVq5OvdjgmaZp0oJaQnN8sOUj/PW8Zqo6l29syKu1LRibSfyVRJpavvNl5z8Mz0QqbtZfV8/Iwv99v102v0prMnQQcfgUU=
